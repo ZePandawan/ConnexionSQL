@@ -15,7 +15,8 @@ namespace ConnexionSQL
             // Data Source=TRAN-VMWARE\SQLEXPRESS;Initial Catalog=simplehr;Persist Security Info=True;User ID=sa;Password=12345
             //
             string connString = @"Data Source=" + datasource + ";Initial Catalog="
-                        + database + "; Integrated Security = True";
+                       + database + ";Integrated Security =True";
+            //string connString = @"Data Source=pc-dlongueville\sqlexpress;Initial Catalog=EXH_2019_04;Integrated Security=True";
             SqlConnection conn = new SqlConnection(connString);
             return conn;
         }

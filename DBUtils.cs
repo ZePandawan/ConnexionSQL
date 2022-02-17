@@ -11,9 +11,9 @@ namespace ConnexionSQL
     {
         public static SqlConnection GetDBConnection()
         {
-            string datasource = @"pc - dlongueville\sqlexpress"; 
+            string datasource = @"pc-dlongueville\sqlexpress";
             string database = "EXH_2019_04";
-            return DBSQLServerUtils.GetDBConnection(datasource,  database);
+            return DBSQLServerUtils.GetDBConnection(datasource, database);
         }
     }
 }
