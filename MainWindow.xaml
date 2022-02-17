@@ -7,11 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <Label Content="Label" Name="Label1" HorizontalAlignment="Left" Margin="30,49,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" Name="Label2" HorizontalAlignment="Left" Margin="30,80,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" Name="Label3" HorizontalAlignment="Left" Margin="30,111,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" Name="Label4" HorizontalAlignment="Left" Margin="30,142,0,0" VerticalAlignment="Top"/>
+        <Button Content="Connexion Bdd" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Label Content="" Name="Label1" HorizontalAlignment="Left" Margin="30,49,0,0" VerticalAlignment="Top"/>
+        <Label Content="" Name="Label2" HorizontalAlignment="Left" Margin="30,80,0,0" VerticalAlignment="Top"/>
+        <Label Content="" Name="Label3" HorizontalAlignment="Left" Margin="30,111,0,0" VerticalAlignment="Top"/>
+        <Label Content="" Name="Label4" HorizontalAlignment="Left" Margin="30,142,0,0" VerticalAlignment="Top"/>
+        <Button Content="Lire les noms des tables" HorizontalAlignment="Left" Margin="132,10,0,0" VerticalAlignment="Top" Click="Button2_Click"/>
 
     </Grid>
 </Window>

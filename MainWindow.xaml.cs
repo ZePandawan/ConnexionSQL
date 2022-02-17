@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -17,9 +19,7 @@ using System.Windows.Shapes;
 
 namespace ConnexionSQL
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -40,9 +40,37 @@ namespace ConnexionSQL
             }
             catch (Exception a)
             {
-                Label4.Content = "Error: " + a.Message;
+                Label3.Content = "Error: " + a.Message;
             }
             Console.Read();
+            conn.Close();
+        }
+
+        private void Button2_Click(object sender, RoutedEventArgs e)
+        {
+            SqlConnection conn = DBUtils.GetDBConnection();
+            conn.Open();
+
+        }
+
+        private void QuerySQL(SqlConnection conn)
+        {
+            string requete = "Select * From DONNEES Where Heure = '43565,4625';";
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = conn;
+            cmd.CommandText = requete;
+
+            using(DbDataReader reader = cmd.ExecuteReader())
+            {
+                if(reader.HasRows)
+                {
+                    while(reader.Read())
+                    {
+                        int 
+                    }
+                }
+            }
         }
     }
 }
