@@ -32,10 +32,13 @@ namespace ConnexionSQL
 
         private void Button2_Click(object sender, RoutedEventArgs e)
         {
+            int nb = 0;
             List<string> ListRecupDonnees = RecupDonnees.RecupDonn();
             foreach (string item in ListRecupDonnees)
             {
-                Trace.WriteLine(item);
+                nb++;
+                //Trace.WriteLine(item);
+                Trace.WriteLine(nb);
             }
         }
     }
