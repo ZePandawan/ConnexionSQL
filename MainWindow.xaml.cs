@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,48 +29,13 @@ namespace ConnexionSQL
             
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Label1.Content = "Getting Connection ...";
-            SqlConnection conn = DBUtils.GetDBConnection();
-            try
-            {
-                Label2.Content = "Openning Connection ...";
-                conn.Open();
-                Label3.Content = "Connection successful!";
-            }
-            catch (Exception a)
-            {
-                Label3.Content = "Error: " + a.Message;
-            }
-            Console.Read();
-            conn.Close();
-        }
 
         private void Button2_Click(object sender, RoutedEventArgs e)
         {
-            SqlConnection conn = DBUtils.GetDBConnection();
-            conn.Open();
-
-        }
-
-        private void QuerySQL(SqlConnection conn)
-        {
-            string requete = "Select * From DONNEES Where Heure = '43565,4625';";
-            SqlCommand cmd = new SqlCommand();
-
-            cmd.Connection = conn;
-            cmd.CommandText = requete;
-
-            using(DbDataReader reader = cmd.ExecuteReader())
+            List<string> ListRecupDonnees = RecupDonnees.RecupDonn();
+            foreach (string item in ListRecupDonnees)
             {
-                if(reader.HasRows)
-                {
-                    while(reader.Read())
-                    {
-                        int 
-                    }
-                }
+                Trace.WriteLine(item);
             }
         }
     }

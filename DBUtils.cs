@@ -9,10 +9,9 @@ namespace ConnexionSQL
 {
     class DBUtils
     {
-        public static SqlConnection GetDBConnection()
+        public static SqlConnection GetDBConnection(string database)
         {
             string datasource = @"pc-dlongueville\sqlexpress";
-            string database = "EXH_2019_04";
             return DBSQLServerUtils.GetDBConnection(datasource, database);
         }
     }
